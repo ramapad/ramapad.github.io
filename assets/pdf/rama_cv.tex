@@ -1,0 +1,647 @@
+% \documentclass[11pt, letterpaper]{article}
+% %\usepackage[top=.75in, noheadfoot, compat2]{geometry}
+% \usepackage[top=.75in, bottom=0in, left=.8in, right=.8in, noheadfoot]{geometry}
+% \usepackage{multicol}
+% \usepackage{multirow}
+% \usepackage{ifthen}
+
+% \newcommand{\sectmeta}[3]{
+%   \vspace*{10pt}
+%   \textbf{{\large #1}} \\
+%   \rule[8pt]{\textwidth}{.1pt}
+%   \vspace*{-22pt}
+%   \begin{list}{} {
+%     \setlength{\itemsep}{#2}
+%     \setlength{\parsep}{1pt}
+%     \setlength{\topsep}{3pt} % 3pt
+%     \setlength{\itemindent}{-11pt} % -6 -11
+%     \setlength{\leftmargin}{11pt} % 15 20
+%   }
+%   #3
+%   \end{list}
+% }
+
+% \newcommand{\sect}[2]{\sectmeta{#1}{5pt}{#2} }
+% \newcommand{\shortsect}[2]{\sectmeta{#1}{0pt}{#2} }
+
+% \newcounter{papers}
+% \newcounter{savepapers}
+
+% \newcommand{\papers}[2]{
+%   \textsc{\large #1}
+%   \begin{list}{\arabic{papers}.} {\usecounter{papers}
+%     \setlength{\itemsep}{5pt}
+%     \setlength{\parsep}{1pt}
+%     \setlength{\topsep}{3pt}
+%     \setlength{\labelsep}{3pt}
+%     \setlength{\itemindent}{-11pt} % -6
+%     \setlength{\leftmargin}{22pt} % 15
+%   }
+%   #2
+%   \end{list}
+% }
+
+% \newcommand{\paper}[4][0]{\item \textbf{#2}. \\
+%   \hspace*{-14pt} #3. \\
+%   \hspace*{-14pt} #4.
+%   \ifthenelse{\equal{#1}{0}}{}{Acceptance rate: #1\%.}
+% }
+
+% \newcommand{\toappear}[4][0]{\paper[#1]{#2}{#3}{To appear in #4}}
+
+% \newcommand{\job}[5]{\textsc{#1}#2 \\ #3 \hfill #4 \ifthenelse{\equal{#4}{}}{}{--} #5 \\ }
+% \newcommand{\work}[5]{\job{#1}{#2}{#3}{#4}{#5}}
+
+% \newcommand{\talk}[3]{\textit{#1}. \hfill #2 \\ \hspace{0pt}#3.}
+
+% \newcommand{\event}[2]{#1 \hfill #2 \\ }
+
+% \newcommand{\me}{\textsl{Ramakrishna Padmanabhan}}
+
+% \newlength{\tabspace}
+% \setlength{\tabspace}{-3pt}
+
+% \newcommand{\resume}[1]{#1}
+% \newcommand{\ignore}[1]{}
+
+% \begin{document}
+% \pagestyle{empty}
+% \begin{flushleft}
+
+% \begin{center}
+% \textbf{\huge Ramakrishna Padmanabhan}
+% \end{center}
+
+% \rule[8pt]{\textwidth}{.1pt}
+% \vspace{-20pt} \\
+% Department of Computer Science \hfill \textsf{ramapad@cs.umd.edu} \\
+% University of Maryland \hfill +1 732 986 8858 \\
+% College Park, MD 20742 \hfill http://www.cs.umd.edu/~ramapad/ \\
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \ignore{
+% %\begin{center}
+%   \begin{tabular*}{\textwidth}{llr}
+%     \multirow{3}{180pt}{\textbf{\huge{Adam Bender}}} & & \\
+%     & Department of Computer Science & \textsf{bender@cs.umd.edu} \\
+%     & University of Maryland & \textsf{www.cs.umd.edu/\textasciitilde bender} \\
+%     & College Park, MD 20742 & +1 240 645 6176 \\
+%   \end{tabular*}
+% %\end{center}
+% }
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[10pt]{article}
+\usepackage[left=2cm, right=2cm, bottom=1.2cm, top=1.5cm]{geometry}
+%\usepackage[subtle]{savetrees}
+\usepackage{mdwlist}
+\usepackage{tabularx}
+\usepackage{multirow}
+ % \usepackage[bf,small,compact]{titlesec}
+% \titlespacing{\section}{0pt}{11pt}{4pt}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\newcommand{\hide}[1]{}
+\newcommand{\sectmeta}[3]{
+  \vspace*{10pt}
+  \textbf{{\large #1}} \\
+  \rule[8pt]{\textwidth}{.1pt}
+  \vspace*{-22pt}
+  \begin{list}{} {
+    \setlength{\itemsep}{#1}
+    \setlength{\parsep}{0pt}
+    \setlength{\topsep}{0pt} % 3pt
+    \setlength{\itemindent}{-11pt} % -6 -11
+    \setlength{\leftmargin}{11pt} % 15 20
+  }
+  #3
+  \end{list}
+}
+
+\newcommand{\sect}[2]{\sectmeta{#1}{5pt}{#2} }
+
+\newcommand{\shortsect}[2]{\sectmeta{#1}{0pt}{#2} }
+
+\newenvironment{myitemize}
+{ \begin{itemize}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}     }
+{ \end{itemize}                  } 
+
+\pagestyle{empty}
+\title{Ramakrishna Padmanabhan}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\vspace*{-12mm}
+\noindent
+SDSC 329 \hfill ramapad@caida.org\\
+San Diego Supercomputer Center \hfill 732-986-8858\\
+University of California, San Diego \hfill \href{https://www.ramapad.com/}{https://www.ramapad.com/}
+\hrule
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \shortsect{Research Interests}{
+%   \item I am primarily interested in measuring networks: their topology, connectivity and performance.
+% }
+
+\section*{Research Interests}
+
+I am primarily interested in measuring networks: their topology, connectivity, and performance.
+
+
+\section*{Education}
+\begin{tabular}{l p{5.3cm} r}
+  PhD, Computer Science & GPA : 3.84 & August 2011 - December 2018 \\
+  \vspace{0.35cm}
+  University of Maryland, College Park & Advisor : Dr.~Neil Spring&\\
+
+  B.Tech in Computer Science and Engg & GPA : 9.2 / 10 & \hspace{2cm} June 2005 - May 2009 \\
+	\multicolumn{2}{l}{SASTRA University, Thanjavur, India}& 
+\end{tabular}
+
+\section*{Refereed Publications}
+\label{sec:publications}
+\begin{itemize}
+ \setlength\itemsep{0em}
+
+\item DynamIPs: Analyzing address assignment practices in IPv4 and IPv6 \\
+  \emph{Ramakrishna Padmanabhan, John P. Rula, Philipp Richter, Stephen D. Strowes, Alberto Dainotti}. \\ 
+  CoNEXT 2020 (Conference on emerging Networking EXperiments and Technologies) \\
+ 
+\item Trufflehunter: Cache Snooping Rare Domains at Large Public DNS Resolvers \\
+  \emph{Audrey Randall, Enze Liu, Gautam Akiwate, Ramakrishna Padmanabhan, Geoffrey M. Voelker, Stefan Savage, Aaron Schulman}. \\ 
+  IMC 2020 (Internet Measurement Conference) \\
+
+\item Residential Links Under the Weather \\
+  \emph{Ramakrishna Padmanabhan, Aaron Schulman, Dave Levin, Neil Spring}. \\ 
+  SIGCOMM 2019 (Special Interest Group on Data Communication Conference) \\
+
+\item Geo-locating BGP prefixes \\
+  \emph{Philipp Winter, Ramakrishna Padmanabhan, Alistair King, Alberto Dainotti}. \\ 
+ TMA 2019 (Network Traffic Measurement and Analysis Conference)
+ \\
+  
+\item  How to find correlated Internet failures \\
+  \emph{Ramakrishna Padmanabhan, Aaron Schulman, Alberto Dainotti, Dave Levin, Neil
+    Spring}. \\ 
+ PAM 2019 (Passive and Active Measurement Conference) \\
+
+\item  Advancing the Art of Internet Edge Outage Detection \\
+  \emph{Philipp Richter, Ramakrishna Padmanabhan, Neil
+    Spring, Arthur Berger, David Clark}. \\ 
+  IMC 2018 (Internet Measurement Conference) \\
+
+\item  Reasons Dynamic Addresses Change \\
+  \emph{Ramakrishna Padmanabhan, Amogh Dhamdhere, Emile Aben, kc
+    claffy, Neil
+    Spring}. \\ 
+  IMC 2016 (Internet Measurement Conference) \\
+% Acceptance rate: 
+%% Slides:
+%% http://www.cs.umd.edu/\~ramapad/docs/timeouts\_imc15\_pdf.pdf
+
+\item  Timeouts: Beware Surprisingly High Delay \\
+  \emph{Ramakrishna Padmanabhan, Patrick Owen, Aaron Schulman, Neil
+    Spring}. \\ 
+  IMC 2015 (Internet Measurement Conference)\\
+% Acceptance rate: 26\%
+%% Slides: http://www.cs.umd.edu/\~ramapad/docs/timeouts\_imc15\_pdf.pdf
+
+\item  UAv6: Alias Resolution in IPv6 Using Unused Addresses \\
+  \emph{Ramakrishna Padmanabhan, Zhihao Li, Dave Levin, Neil
+    Spring}. \\
+  PAM 2015 (Passive and Active Measurement Conference) \\
+  % Acceptance rate: 27\%
+
+\end{itemize}
+
+
+\section*{Posters and visualizations}
+\label{sec: viz}
+\begin{itemize}
+%%  \setlength\itemsep{0em}
+
+\item Measuring Last-Mile Internet Reliability During Severe Weather \\
+\emph{Ramakrishna Padmanabhan, Ramakrishnan Sundara Raman, Reethika
+  Ramesh, Aaron Schulman, Dave Levin, Neil Spring}. \\
+Internet Measurement Conference, 2017 (Poster) \\
+
+\item  Live visualization of residential Internet outages detected
+  during severe weather  \\
+  http://bluepill.cs.umd.edu:3000/map/countymap \\
+
+\item  Visualization of failures that occurred during Hurricane Sandy \\
+  https://www.youtube.com/watch?v=pyqE87MFdqw \\
+
+\end{itemize}
+
+
+
+% \section*{Invited blogposts and talks}
+% \label{sec:talks}
+% \begin{itemize}
+%  \setlength\itemsep{0em}
+
+% \item  UAv6: Alias Resolution in IPv6 Using Unused Addresses \\
+%   AIMS 2015 (April), CAIDA, San Diego \\
+
+% \item  Dynamic address durations in RIPE Atlas probes \\
+%   AIMS 2016 (Feb), CAIDA, San Diego \\
+
+% \item Reasons Dynamic Addresses Change \\
+% 2016 (Aug), Northeastern University, Boston \\
+
+% \item Reasons Dynamic Addresses Change \\
+% 2016 (Nov), RIPE Labs Blog \\
+% https://labs.ripe.net/Members/ramakrishna{\_}padmanabhan/reasons-dynamic-addresses-change \\
+
+% \item Remote Residential Outage Detection With Active Probes \\
+% 2016 (Nov), University of Southern California, Los Angeles \\
+
+% \item  Analyzing static, dynamic, and gateway IPv4 addresses \\
+%   AIMS 2017 (Mar), CAIDA, San Diego \\
+
+% \item We can find shared IP addresses \\
+% 2018 (Mar), APNIC Blog \\
+% https://blog.apnic.net/2018/03/05/can-find-shared-ip-addresses/ \\
+
+% \item Measuring and Inferring Weather's Effect on Residential Link Failures \\
+%   AIMS 2018 (Mar), CAIDA, San Diego \\
+
+% \end{itemize}
+
+
+\section*{Invited blogposts}
+\label{sec:blogs}
+\begin{itemize}
+ \setlength\itemsep{0em}
+
+\item Reasons Dynamic Addresses Change \\
+2016 (Nov), \href{https://labs.ripe.net/Members/ramakrishna_padmanabhan/reasons-dynamic-addresses-change}{RIPE Labs Blog} \\
+\\
+
+\item We can find shared IP addresses \\
+2018 (Mar), \href{https://blog.apnic.net/2018/03/05/can-find-shared-ip-addresses/}{APNIC Blog} \\
+\\
+
+\end{itemize}
+
+
+\section*{Invited talks}
+\label{sec:talks}
+\begin{itemize}
+ \setlength\itemsep{0em}
+
+\item IPv4 vs. IPv6 address lifetimes \\
+  NPS/CAIDA 2020 (Apr) Virtual IPv6 Workshop \\
+ 
+\item IODA-NP: Detecting outages affecting the Internet's edge \\
+  AIMS 2019 (Mar), CAIDA, San Diego \\
+  
+\item Measuring and Inferring Weather's Effect on Residential Link Failures \\
+  AIMS 2018 (Mar), CAIDA, San Diego \\
+
+\item Analyzing static, dynamic, and gateway IPv4 addresses \\
+  AIMS 2017 (Mar), CAIDA, San Diego \\
+
+\item Remote Residential Outage Detection With Active Probes \\
+2016 (Nov), University of Southern California, Los Angeles \\
+
+\item Reasons Dynamic Addresses Change \\
+2016 (Aug), Northeastern University, Boston \\
+
+\item Dynamic address durations in RIPE Atlas probes \\
+  AIMS 2016 (Feb), CAIDA, San Diego \\
+
+\item UAv6: Alias Resolution in IPv6 Using Unused Addresses \\
+  AIMS 2015 (April), CAIDA, San Diego \\
+
+\end{itemize}
+
+
+\section*{Service}
+\label{sec:serv}
+\begin{itemize*}
+\item TPC member, Internet Measurement Conference, 2019  
+\item TPC member, Passive and Active Measurement Conference, 2019
+\item Shadow TPC member, Internet Measurement Conference, 2018
+\item TPC member, Passive and Active Measurement Conference, 2018
+\end{itemize*}
+
+
+
+\section*{Internships}
+\label{sec:internships}
+
+\begin{myitemize}
+\item{CAIDA: Center for Applied Internet Data Analysis, San Diego}
+  \hfill Jun 4 - Aug 26 2018\\
+  \begin{myitemize}
+  \item {Worked on defining, measuring, and evaluating macroscopic
+    Internet-edge outages}
+\end{myitemize}
+
+\item{Akamai Technologies, 150 Broadway, Cambridge, Massachusetts}
+  \hfill Jun 20 - Sep 9 2016\\
+  \begin{myitemize}
+  \item{Analyzed dynamic IP address durations}
+  \item{Detected proxies and gateways using Akamai software
+      installation logs}
+  \item{Detected and evaluated Internet outages}
+  \end{myitemize}
+
+
+\item{CAIDA: Center for Applied Internet Data Analysis, San Diego}
+  \hfill Jun 1 - Sep 30 2015\\
+  \begin{myitemize}
+  \item {Worked towards integrating UAv6 into CAIDA's Ark infrastructure}
+  \item{Began a collaboration with CAIDA on Dynamic IP address Dynamics}
+  \end{myitemize}
+  
+\end{myitemize}
+
+% \sect{Education}{
+% \item
+% \job{University of Maryland}
+%   {, College Park, MD}
+%   {Ph.D. student in Computer Science}
+%   {Fall 2011}
+%   {present}
+%   ~~Advised by Neil Spring \\
+% %  ~~Expected graduation: August 2010 \\
+% GPA 3.84 \\
+% % Relevant coursework: networks, cryptography, algorithms, complexity theory, elliptic curves
+
+% \item
+% \job{SASTRA University}
+%   {, India}
+%   {Bachelor of Technology in Computer Science and Engineering}
+%   {June 2005}
+%   {May 2009}
+
+% }
+
+
+% \shortsect{Awards}{
+% \item Student Travel Grant GENI GEC 14, June 2012
+% \item University of Maryland Dean's Fellowship, 2012
+% \item University of Maryland Dean's Fellowship, 2011
+
+%\item NSF Graduate Research Fellowship Honorable Mention, 2005
+%\item \event{Carnegie Mellon University School of Computer Science Dean's
+%  List (7 times)}{Spring 2004}
+%\item \event{Inducted into The Phi Beta Kappa Society}{Spring 2004}
+%\item \event{Inducted into The Honor Society of Phi Kappa Phi}{Fall 2002}
+%\item \event{Inducted into The National Society of Collegiate
+%  Scholars}{Spring 2001}
+%\item \event{Dr. Chandra Kapur, Saul F. Shapira, and Alexander C. Speyer,
+%  Jr. Scholarships \\ recipient}{Fall 2000}
+% }
+
+\section*{Research Experience}
+\label{sec:research-experience}
+\begin{itemize}
+
+\item{\bf{When should pings time out?}} 
+With colleagues, I led an analysis of ping round-trip times (RTTs) on the Internet in an effort to
+determine
+timeouts that would capture most ping responses, using large ping datasets
+collected by ISI and Zmap. I
+found addresses that are prone to high RTTs and probed them to determine the cause of high RTTs.
+Our results showed that a 5 second timeout would miss 5\% of pings from 5\% of
+addresses, and in general, RTTs were higher than expected. We also showed that the primary cause of these high RTTs were cellular
+networks, and that high RTTs are a relatively recent phenomenon
+beginning in 2011.
+
+\item{\bf{Dynamic IP address Dynamics}}
+
+  Many studies assume that dynamic addresses change after
+  certain durations without much empirical evidence. In this project,
+  I first analyzed RIPE Atlas datasets to find patterns in how
+  dynamic addresses change. Several ISPs in Europe and Asia
+  periodically change addresses assigned to customer
+  devices. Addresses are also likely to change upon Internet outages,
+  with some ISPs changing the assigned address even upon CPE
+  reboots. Next, I corroborated the results observed from RIPE Atlas
+  using Akamai datasets. My eventual goal is to generate a global map of
+  dynamic address properties that can help industry practioners and researchers get a better
+  sense of when addresses change and why.
+
+\item{\bf{IPv6 Topology}}
+
+I am studying the
+  topology of the evolving IPv6 network and developed a tool with colleagues,
+  UAv6, that makes generated topologies more accurate. In the summer
+  of 2015, I worked towards deploying UAv6 in the production infrastructure of CAIDA,
+  one of the world's leading Internet measurement labs.
+
+\item{\bf{Proxy detection}}
+
+  IPv4 address scarcity has led to an increase in addresses being used
+  as proxies, where tens to thousands of users can access the
+  Internet using a handful of proxy addresses. Detecting proxy
+  addresses and
+  classifying them into different kinds
+  (enterprise, mobile, cloud etc.) will help IP reputation systems and
+  access-control systems. I used Akamai datasets to detect proxy
+  addresses, and to analyze how the behavior of such addresses
+  changes over time.
+
+\item{\bf{Studying the effect of weather on residential Internet connectivity}}
+With colleagues, I led an investigation into the resilience of residential
+  Internet connections to various weather conditions by analyzing
+  longitudinal data
+  collected by the Thunderping tool. Thunderping pings IP addresses in
+  U.S. counties that have ongoing active weather alerts. We analyze these pings
+  to determine how many more outages occurred during times of active
+  weather conditions. Our analysis of eight years' of this data
+  revealed that a variety
+  of weather conditions are correlated with increased probability of
+  failure, and the increase depends upon the type of weather, link
+  type, and geographic location.
+
+
+\end{itemize}
+
+
+\section*{Teaching Experience}
+\label{sec:teaching-experience}
+
+\begin{itemize*}
+\item Teaching Assistant for CMSC417 - Computer Networks, \emph{with
+    Colin Dixon}. \hfill (Spring 2016)
+\item Teaching Assistant for CMSC417 - Computer Networks, \emph{with
+    Ashok Agrawala}. \hfill (Fall 2011, Spring 2012)
+\end{itemize*}
+
+
+%%%%%%%%%% TODO: Add this back once you have some more honors! %%%%%%%%%%%%%%%%%
+% \section*{Academic Honors}
+% \label{sec:academic-honors}
+
+% \begin{itemize*}
+% \item Student Travel Grant GENI GEC 14, June 2012
+% \item University of Maryland Dean's Fellowship (2012, 2011)
+% \item SASTRA University Dean's list (2006, 2007, 2008)
+% \end{itemize*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% \sect{Professional Experience}{
+  
+% \item 
+%   \work{University of Maryland}{}
+%        {Graduate Research Assistant; \textbf{Advisor: Neil Spring}}
+%        {May 2012}
+%        {present\newline}
+%        %
+       
+%        \textbf{Alias Resolution in IPv6}: Alias resolution is the process of grouping interface addresses (usually obtained from traceroutes) onto their corresponding routers. Alias resolution in IPv6 remains an open problem and I have developed two new alias resolution techniques to augment existing ones. 
+%        \begin{itemize}
+%          \item The first, UAv6, obtains aliases in two phases. The ``harvest'' phase gathers potential alias pairs, and is based on our empirical observation that addresses adjacent to router interface addresses are often unused. UAv6 probes these unused addresses, eliciting ICMPv6 Address Unreachable response. We assume that the source address of such a response belongs to a router directly connected to the prefix containing the unused and router interface addresses, allowing us to infer potential aliases. The ``disambiguation'' phase determines which interface address is an alias of the Address Unreachable’s source address. UAv6 uses both new and established techniques to construct proofs or disproofs that two addresses are aliases.
+%          \item I have also developed one of the disambiguation techniques as a separate alias resolution tool on its own and improved its efficiency.
+%        \end{itemize}  
+%        %% \item The first, UAv6, obtains aliases in two phases. The ``harvest'' phase gathers potential alias pairs, and is based on our empirical observation that addresses adjacent to router interface addresses are often unused. UAv6 probes these unused addresses, eliciting ICMPv6 Address Unreachable response. We assume that the source address of such a response belongs to a router directly connected to the prefix containing the unused and router interface addresses, allowing us to infer potential aliases. The ``disambiguation'' phase determines which interface address is an alias of the Address Unreachable’s source address. UAv6 uses both new and established techniques to construct proofs or disproofs that two addresses are aliases.
+%        %% \item I have also developed one of the disambiguation techniques as a separate alias resolution tool on its own and improved its efficiency.
+%        %% \end{itemize}
+%        %% \newline
+	
+%        \textbf{Pingin' in the rain}: Residential Internet connections are susceptible to weather-caused outages; we study the effect of weather upon everyday last-mile Internet connectivity. We have designed a system, 'Thunderping', that uses Planetlab nodes to ping hosts in areas that are experiencing severe weather conditions. We analyze the ping data to obtain information about the nature and duration of outages.
+%        \begin{itemize}
+%        \item Created and maintained a database to handle the data. Currently we have over 4 TB of data, collected since April 2011 from over 3 million IP addresses.
+%        \item Performed extensive data analysis using a wide range of techniques.
+%        \end{itemize}
+% %% \newline
+% %% \vspace{0.1 in}	
+
+% \newpage	
+% \item
+%   \work{Indian Institute of Technology Madras}
+%        {, India}
+%        {Research associate; \textbf{Mentor: Krishna Sivalingam}}
+%        {Nov. 2009}
+%        {Jul. 2011\newline}
+% %
+
+%        \textbf{Tactical Field Wireless System:} We performed a feasibility study for a wireless communication system for the Indian army at the Battalion level. I simulated scenarios using OPNET Modeler using which we evaluated various topologies, routing architectures and traffic patterns.
+
+
+% \vspace{0.1 in}
+
+% \item
+%   \work{APtronic AG}
+%        {, Germany}
+%        {Intern; \textbf{Advisor: Theodor Schulte}}
+%        {Sep. 2008}
+%        {Jan. 2009\newline}
+% %
+
+%        \textbf{Device Interfacing:} I used LabVIEW to design a computer-DSP interface that enabled exchange of messages via CAN bus. I also designed a computer-power source interface where messages were exchanged between the computer and the Agilent 6813B power source.
+
+
+% %% \item
+% %%   \work{APtronic AG}
+% %%        {, Germany}
+% %%        {Intern; \textbf{advisor: Theodor Schulte}}
+% %%        {Sep 2008}
+% %% THIS NEWLINE IS WRONG!
+% %%        {Jan 2009\newline}
+% %%        %
+       
+% %%        \textbf{Device Interfacing:} I used LabVIEW to design a computer-DSP interface that enabled exchange of messages via CAN bus. I also designed a computer-power source interface where messages were exchanged between the computer and the Agilent 6813B power source.
+
+% }
+
+
+% % \sect{Publications} {
+%   %% \item
+%   %%   \papers{UAv6: Alias Resolution in IPv6 using unused addresses, Ramakrishna Padmanabhan, Zhihao Li, Dave Levin, and Neil Spring}
+%   \begin{itemize}
+%     \item {UAv6: Alias Resolution in IPv6 using unused addresses, Ramakrishna Padmanabhan, Zhihao Li, Dave Levin, and Neil Spring, PAM 2015}
+%   \end{itemize}
+% % }
+
+% \sect{Skills} {
+% 	\item \textsc{Languages:} C, Python, SQL 
+% 	\item \textsc{Tools:} Postgres, FUSE, ZeroMQ, Protocol Buffers, SQLite, OPNET Modeler, Lex, Yacc
+% 	\item \textsc{Operating Systems:} Linux, Mac OS X, Windows 95/XP/7/8
+% }
+
+
+% \sect{Relevant Courses}{
+% \item \textsc{University of Maryland}
+
+% \event{CMSC818O Advanced Operating Systems}{Fall 2011}
+% \event{CMSC737 Fundamentals of Software Testing}{Fall 2011}
+% \event{CMSC818B Distributed File Systems}{Spring 2012}
+% \event{CMSC818N Social Networking Databases}{Spring 2012}
+% \event{CMSC723 Computational Linguistics}{Fall 2012}
+% \event{CMSC798 Embedded Systems}{Fall 2012}
+% \event{CMSC724 Database Management Systems}{Spring 2013}
+% \event{CMSC818G Information Centric Design of Systems}{Spring 2013}
+% \event{CMSC 651 Analysis of Algorithms}{Fall 2013}
+% \event{CMSC 711 Computer Networks}{Spring 2014}
+% }
+
+% \sect{Teaching Experience}{
+
+% \item \work{University of Maryland}{}{Teaching Assistant}{}{}
+% \event{CMSC417 Computer Networks}{Spring 2012}
+% \event{CMSC417 Computer Networks}{Fall 2011}
+% }
+
+% %\sect{References}{
+
+
+% %\begin{multicols}{2}
+
+
+% %\item Neil Spring \\
+% %University of Maryland \\
+% %Dept. of Computer Science \\
+% %A. V. Williams Building \\
+% %College Park, MD 20742 \\
+% %Phone: 301-405-2909 \\
+% %Fax: 301-405-6707 \\
+% %Email: \textsf{nspring@cs.umd.edu}
+
+
+% %\item Mema Roussopoulos \\
+% %Univerisity of Athens \\
+% %Department of Informatics \\
+% %Panepistimioupoli, 15784, Ilisia \\
+% %Athens, Greece \\
+% %Phone: +30-210-727-5216 \\
+% %Email: \textsf{mema@di.uoa.gr}
+
+% \bigskip
+
+
+% %\setcounter{unbalance}{2}
+
+% %\end{multicols}
+
+
+%}
+
+% \end{flushleft}
+\end{document}

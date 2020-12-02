@@ -2629,11 +2629,11 @@ input, select, textarea {
 		color: rgba(255, 255, 255, 0.5);
 		height: 100%;
 		left: 0;
-		padding: 4em 4em;
+		padding: 4em 0em;
 		position: fixed;
-		text-align: right;
+		text-align: center;
 		top: 0;
-		width: 35%;
+		width: 30%;
 	}
 		#header > * {
 			-moz-flex-shrink: 0;
@@ -3022,7 +3022,7 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				padding: 6em 3em 3em 3em;
+				padding: 6em 0em 3em 0em;
 				width: 30%;
 			}
 
@@ -3254,3 +3254,44 @@ input, select, textarea {
 			}
 
 	}
+
+	#nav {
+	    -moz-flex-grow: 1;
+	    -webkit-flex-grow: 1;
+	    -ms-flex-grow: 1;
+	    flex-grow: 1;
+	}
+
+	#nav ul {
+	    list-style: none;
+	    margin: 0;
+	    padding: 0;
+	}
+
+	#nav ul li {
+	    border-top: solid 2px #5ccfb1;
+	    display: block;
+	    padding: 0;
+	}
+
+	#nav ul li a {
+	    -moz-transition: none;
+	    -webkit-transition: none;
+	    -ms-transition: none;
+	    transition: none;
+	    border: 0;
+	    color: #ffffff !important;
+	    display: block;
+	    padding: 0.85em 0;
+	    text-decoration: none;
+	}
+	
+	#nav ul li a.active {
+	    background: #fff;
+	    color: #4acaa8 !important;
+	}
+	
+	#nav ul li:first-child {
+	    border-top: 0;
+	}
+	

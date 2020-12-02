@@ -3,7 +3,6 @@
 <html>
   <head>
     <title>Ramakrishna Padmanabhan</title>
-    <link rel="icon" href="/assets/MichiganLogo.ico" type="image/x-icon" sizes="16x16">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -16,8 +15,17 @@
 	<div class="hidden-xs col-sm-3 col-md-12">
 	  <a href="/" class="image avatar"><img src="images/profile_pic.jpg" alt=""/></a>
 	</div>
-	<h1><strong style="font-size: 1.8rem;">Ramakrishna Padmanabhan</strong><br></h1>
+	<h1><strong style="font-size: 1.8rem;">Ramakrishna <br> Padmanabhan</strong><br></h1>
 	<h1 style="font-size: 1.2rem;"> Postdoctoral researcher <br> <a class="goblue" href="https://www.caida.org/" target="_blank"> CAIDA </a> <br> <a class="goblue" title="Go Blue!" href="https://ucsd.edu/" target="_blank"> UC San Diego </a> </h1>
+	<br>
+	<nav id="nav">
+	  <ul>
+	    <li><a href="#about" class="scrolly" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">About Me</a></li>
+	    <li><a href="#publications" class="scrolly" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Publications</a></li>
+	    <li><a href="#posters" class="scrolly" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Posters and Reports</a></li>
+	    <li><a href="#service" class="scrolly active" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Service</a></li>
+	  </ul>
+	</nav>
 	
 	<ul class="icons">
 	  <li><a href="https://twitter.com/rameses888" target="_blank"  class="icon fa-twitter"><span class="label">Twitter</span></a></li>
@@ -35,7 +43,7 @@
     <div id="main">
       
       <!-- One -->
-      <section id="one">
+      <section id="about">
 	<header class="major">
 	  <h2><a href"#" class="goblue">About Me</a></h2>
 	</header>
@@ -45,51 +53,50 @@
 	    I am broadly interested in measuring networks and am actively working on measuring Internet addressing, topology, and connectivity. <br> Before joining CAIDA in 2019, I completed my Ph.D. in Computer Science from the University of Maryland, where I worked with Dr. Neil Spring and Dr. Dave Levin. My <a class="goblue" href="https://drum.lib.umd.edu/bitstream/handle/1903/21653/Padmanabhan_umd_0117E_19602.pdf?sequence=2&isAllowed=n" target="_blank">dissertation</a> focused upon measuring residential Internet connectivity using active probes. <br>
 	  </h3>
 	</div>
-
+	
 	<div>
 	  <a href="https://ioda.caida.org" target="_blank"><img src="images/ioda_logo.jpeg" style="width:13%; float:right;"></a>
 	  <h3 style="text-align: justify; width: 85%;">
 	    At CAIDA, I am continuing to develop methodologies to detect Internet connectivity outages as part of the <a class="goblue" href="https://ioda.caida.org/" target="_blank">IODA</a> project with Dr. Alberto Dainotti.
 	  </h3>
 	</div>
-					
-	<hr>
-	
-	<section id="publications">
-	  <div>
+      </section>
+      
+      <section id="publications">
+	<div>
 	  
-	    <h2><a href="#publications" class="goblue">Publications</a></h2>
-
-    	    <div>
-              <p><h3 class="paper-titles"><a href="papers/dynamips_conext20.pdf" target="_blank">
-		    DynamIPs: Analyzing address assignment practices in IPv4 and IPv6</a>
-		  <button style="margin-left:10px; background:white; font-size:small"><a class="goblue" href="slides/conext20_slide_submission.key" target="_blank">Slides</a></button> 
-		  <button style="margin-left:0px; background:white; font-size:small"><a class="goblue" href="https://dl.acm.org/doi/10.1145/3386367.3431314#sec-supp" target="_blank">Video</a></button>
-		  
-		</h3>
-       		<small style="font-size:12pt;"> <u>Ramakrishna Padmanabhan</u>, John P. Rula, Philipp Richter, Stephen D. Strowes, and Alberto Dainotti</small></br>
-       						<b>In:</b> <a class="goblue" href="https://conferences.sigcomm.org/co-next/2020/#!/home" target="_blank"><i>CoNEXT 2020</a>, Barcelona, Spain (Virtual event) </i></br>
-        					</p>
-    	    </div>
-
-    	    <div>
-              <p><h3 class="paper-titles"><a href="papers/trufflehunter_imc20.pdf" target="_blank">
-		    Trufflehunter: Cache Snooping Rare Domains at Large Public DNS Resolvers</a>
-		  <button style="margin-left:0px; background:white; font-size:small"><a class="goblue" href="https://dl.acm.org/doi/abs/10.1145/3419394.3423640#sec-supp" target="_blank">Video</a></button>
-		  
-		</h3>
-       		 <small style="font-size:12pt;"> Audrey Randall, Enze Liu, Gautam Akiwate, <u>Ramakrishna Padmanabhan</u>, Geoffrey M. Voelker, Stefan Savage, and Aaron Schulman</small></br>
-       						<b>In:</b> <a class="goblue" href="https://conferences.sigcomm.org/imc/2020/" target="_blank"><i>IMC 2020</a>, Pittsburgh, USA (Virtual event) </i></br>
-              </p>
-    	    </div>
-
-    	    <div>
-              <p><h3 class="paper-titles"><a href="papers/weather_sigcomm19.pdf" target="_blank">
-		    Residential Links Under the Weather </a>
-		  <button style="margin-left:10px; background:white; font-size:small"><a class="goblue" href="slides/sigcomm_weather_paper_final.key" target="_blank">Slides</a></button> 
-		  <button style="margin-left:0px; background:white; font-size:small"><a class="goblue" href="https://dl.acm.org/doi/abs/10.1145/3341302.3342084#sec-supp" target="_blank">Video</a></button>
-		  
-		</h3>
+	  <h2><a href="#publications" class="goblue">Publications</a></h2>
+	  
+    	  <div>
+            <p><h3 class="paper-titles"><a href="papers/dynamips_conext20.pdf" target="_blank">
+		  DynamIPs: Analyzing address assignment practices in IPv4 and IPv6</a>
+		<button style="margin-left:10px; background:white; font-size:small"><a class="goblue" href="slides/conext20_slide_submission.key" target="_blank">Slides</a></button> 
+		<button style="margin-left:0px; background:white; font-size:small"><a class="goblue" href="https://dl.acm.org/doi/10.1145/3386367.3431314#sec-supp" target="_blank">Video</a></button>
+		
+	      </h3>
+       	      <small style="font-size:12pt;"> <u>Ramakrishna Padmanabhan</u>, John P. Rula, Philipp Richter, Stephen D. Strowes, and Alberto Dainotti</small></br>
+       	      <b>In:</b> <a class="goblue" href="https://conferences.sigcomm.org/co-next/2020/#!/home" target="_blank"><i>CoNEXT 2020</a>, Barcelona, Spain (Virtual event) </i></br>
+            </p>
+    	  </div>
+	  
+    	  <div>
+            <p><h3 class="paper-titles"><a href="papers/trufflehunter_imc20.pdf" target="_blank">
+		  Trufflehunter: Cache Snooping Rare Domains at Large Public DNS Resolvers</a>
+		<button style="margin-left:0px; background:white; font-size:small"><a class="goblue" href="https://dl.acm.org/doi/abs/10.1145/3419394.3423640#sec-supp" target="_blank">Video</a></button>
+		
+	      </h3>
+       	      <small style="font-size:12pt;"> Audrey Randall, Enze Liu, Gautam Akiwate, <u>Ramakrishna Padmanabhan</u>, Geoffrey M. Voelker, Stefan Savage, and Aaron Schulman</small></br>
+       	      <b>In:</b> <a class="goblue" href="https://conferences.sigcomm.org/imc/2020/" target="_blank"><i>IMC 2020</a>, Pittsburgh, USA (Virtual event) </i></br>
+            </p>
+    	  </div>
+	  
+    	  <div>
+            <p><h3 class="paper-titles"><a href="papers/weather_sigcomm19.pdf" target="_blank">
+		  Residential Links Under the Weather </a>
+		<button style="margin-left:10px; background:white; font-size:small"><a class="goblue" href="slides/sigcomm_weather_paper_final.key" target="_blank">Slides</a></button> 
+		<button style="margin-left:0px; background:white; font-size:small"><a class="goblue" href="https://dl.acm.org/doi/abs/10.1145/3341302.3342084#sec-supp" target="_blank">Video</a></button>
+		
+	      </h3>
        		<small style="font-size:12pt;"> <u>Ramakrishna Padmanabhan</u>, Aaron Schulman, Dave Levin, and Neil Spring</small></br>
        						<b>In:</b> <a class="goblue" href="https://conferences.sigcomm.org/sigcomm/2019/" target="_blank"><i>SIGCOMM 2019</a>, Beijing, China </i></br>
         					</p>
@@ -156,88 +163,90 @@
     	    </div>
 	    
 	    
-	  </div>
+	</div>
+      </section>
+      
+      <section id="posters">
+	<div>
+	  <h2><a href="#posters" class="goblue">Posters and Reports</a></h2>
 	  
-	  <hr>
 	  
-	  <div>
-	    <h2><a href="#misc" class="goblue">Posters and invited blogposts</a></h2>
+    	  <div>
+            <p><h3 class="paper-titles"><a href="posters/reliability_imc17_poster.pdf" target="_blank">
+		  Measuring Last-Mile Internet Reliability During Severe Weather</a>
+	      </h3>
+       	      <small style="font-size:12pt;"> <u>Ramakrishna Padmanabhan</u>, Ramakrishnan Sundara Raman, Reethika Ramesh, Aaron Schulman, Dave Levin, and Neil Spring</small></br>
+       	      <b>In:</b> <a class="goblue" href="https://conferences.sigcomm.org/imc/2017/#" target="_blank"><i>IMC 2017</a>, London, UK </i></br>
+            </p>
+    	  </div>
+	  
+    	  <div>
+            <p><h3 class="paper-titles"><a href="https://blog.apnic.net/2018/03/05/can-find-shared-ip-addresses/" target="_blank">
+		  We can find shared IP addresses </a>
+	      </h3>
+       	      <small style="font-size:12pt;"> <u>Ramakrishna Padmanabhan</u></small></br>
+       	      <i> APNIC blog, 2018 </i></br>
+            </p>
+    	  </div>
+	  
+    	  <div>
+            <p><h3 class="paper-titles"><a href="https://labs.ripe.net/Members/ramakrishna_padmanabhan/reasons-dynamic-addresses-change" target="_blank">
+		  Reasons Dynamic Addresses Change</a>
+	      </h3>
+       	      <small style="font-size:12pt;"> <u>Ramakrishna Padmanabhan</u>, Amogh Dhamdhere, Emile Aben, kc claffy, and Neil Spring</small></br>
+       	      <i> RIPE Labs article, 2016 </i></br>
+            </p>
+    	  </div>
+	  
+	</div>
+      </section>
 
-
-    	    <div>
-              <p><h3 class="paper-titles"><a href="posters/reliability_imc17_poster.pdf" target="_blank">
-		    Measuring Last-Mile Internet Reliability During Severe Weather</a>
-		</h3>
-       		 <small style="font-size:12pt;"> <u>Ramakrishna Padmanabhan</u>, Ramakrishnan Sundara Raman, Reethika Ramesh, Aaron Schulman, Dave Levin, and Neil Spring</small></br>
-       						<b>In:</b> <a class="goblue" href="https://conferences.sigcomm.org/imc/2017/#" target="_blank"><i>IMC 2017</a>, London, UK </i></br>
-              </p>
-    	    </div>
-
-    	    <div>
-              <p><h3 class="paper-titles"><a href="https://blog.apnic.net/2018/03/05/can-find-shared-ip-addresses/" target="_blank">
-		    We can find shared IP addresses </a>
-		</h3>
-       		 <small style="font-size:12pt;"> <u>Ramakrishna Padmanabhan</u></small></br>
-       		 <i> APNIC blog, 2018 </i></br>
-              </p>
-    	    </div>
+      <div>
+	<section id="service">	
+	  <h2><a href="service" class="goblue">Service</a></h2>
+	  
+	  <h3 style="text-align: justify; width: 85%;"> 
+	    <ul>
+	      <li>TPC member, Internet Measurement Conference (2019) <br> <br></li>
+	      <li>TPC member, Passive and Active Measurement Conference (2018, 2019, 2020) <br> <br></li>
+	    </ul>
 	    
-    	    <div>
-              <p><h3 class="paper-titles"><a href="https://labs.ripe.net/Members/ramakrishna_padmanabhan/reasons-dynamic-addresses-change" target="_blank">
-		    Reasons Dynamic Addresses Change</a>
-		</h3>
-       		 <small style="font-size:12pt;"> <u>Ramakrishna Padmanabhan</u>, Amogh Dhamdhere, Emile Aben, kc claffy, and Neil Spring</small></br>
-       		 <i> RIPE Labs article, 2016 </i></br>
-              </p>
-    	    </div>
-	    
-	  </div>
-
-	  <div>
-	    <h2><a href="#service" class="goblue">Service</a></h2>
-	    
-	    <h3 style="text-align: justify; width: 85%;"> 
-	      <ul>
-		<li>TPC member, Internet Measurement Conference (2019) <br> <br></li>
-		<li>TPC member, Passive and Active Measurement Conference (2018, 2019, 2020) <br> <br></li>
-	      </ul>
-	      
 	    </h3>
-	    
-	  </div>
 	  
-	  
-	  <hr>	
-	  <div>
-	    <h2>See Also:</h2>
-	    
+      </div>
+
+      </section>
+      
+      <div>
+	<h2>See Also:</h2>
+	
 	    <h3 style="text-align: justify; width: 85%;">
 	      
 	      <a href="http://ramapad.blogspot.com/" class="goblue"> Blog </a>
 	      
 	    </h3> 
-	  </div>
+      </div>
     </div>
     </section>
-    
-    <!-- Footer -->
-    <footer id="footer">
-      <div class="inner">
-	<ul class="copyright">
+
+<!-- Footer -->
+<footer id="footer">
+  <div class="inner">
+    <ul class="copyright">
 	  <li><a href="http://html5up.net" target="_blank">HTML5 UP STRATA</a></li>
-	</ul>
-	
-	
-      </div>
-    </footer>
+    </ul>
     
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.poptrox.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/norightclick.js"></script>
-  </body>
+    
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.poptrox.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/norightclick.js"></script>
+</body>
 </html>
